@@ -4,4 +4,5 @@
   * api
   * sql
   * nosql
+  * admin
   
