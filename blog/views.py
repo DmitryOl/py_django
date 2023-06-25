@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from config import *
+
 posts = [
 	{
     	'author': 'Администратор',
@@ -19,11 +21,11 @@ def home(request):
 	context = {
     	'posts': posts
 	}
-	return render(request, '/home/dmitry/djangoPro/blog/templates/home.html', context)
+	return render(request, 'home.html', context)
 #    return HttpResponse('<h1>Главная</h1>')
 
 def about(request):
-	return render(request, '/home/dmitry/djangoPro/blog/templates/about.html', {'title': 'О клубе Python Bytes'})
+	return render(request, 'about.html', {'title': 'О клубе Python Bytes'})
 #    return HttpResponse('<h1>Наш клуб</h1>')
 
 
